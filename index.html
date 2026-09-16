@@ -438,20 +438,34 @@
       <h2 class="section-title">My <span>Resume</span></h2>
       <div class="glass-card resume-box reveal-item reveal-fade-up" style="flex-direction: column; align-items: flex-start; gap: 24px;">
         
+        <!-- Resume Header Bar -->
         <div style="display: flex; justify-content: space-between; width: 100%; flex-wrap: wrap; gap: 20px; border-bottom: 1px solid rgba(212,175,55,0.2); padding-bottom: 20px;">
           <div>
             <h2 style="color:var(--gold-primary); font-family:var(--font-display); margin:0;">HARIBALAN S</h2>
-            <p style="color:var(--text-secondary); font-size:16px; margin:4px 0 0;">Mechanical Engineering Student | Sri Shakthi Institute of Engineering and Technology</p>
+            <p style="color:var(--text-secondary); font-size:16px; margin:4px 0 0;">Mechanical Engineering Student | Learn • Build • Grow</p>
+            <p style="color:var(--text-muted); font-size:13px; margin:2px 0 0;"><i class="fa-solid fa-location-dot"></i> Mathur, Pudukkottai, Tamil Nadu - 622515 | 📞 +91 8870210399</p>
           </div>
-          <a class="btn-primary" href="assets/resume/resume.pdf" id="resumeBtn" download="Haribalan_S_Resume.pdf"><i class="fa-solid fa-download"></i> Download PDF Resume</a>
+          <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+            <a class="btn-gold" href="/assets/resume/haribalan_resume.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-eye"></i> View PDF Resume</a>
+            <a class="btn-primary" href="/assets/resume/haribalan_resume.pdf" id="resumeBtn" download="Haribalan_S_Resume.pdf" target="_blank"><i class="fa-solid fa-download"></i> Download PDF Resume</a>
+          </div>
         </div>
 
+        <!-- Career Objective -->
+        <div style="width: 100%; background: rgba(255,255,255,0.02); border-left: 3px solid var(--gold-primary); padding: 12px 16px; border-radius: 4px;">
+          <b style="color:var(--gold-primary); font-size:14px; text-transform:uppercase; letter-spacing:1px;"><i class="fa-solid fa-bullseye"></i> Career Objective</b>
+          <p style="color:var(--text-secondary); font-size:13.5px; margin:6px 0 0; line-height:1.6;">
+            To obtain a challenging position in a reputed organization where I can apply my technical knowledge, problem-solving skills and continuous learning attitude to contribute to the growth of the organization while building my career in the field of Mechanical Engineering.
+          </p>
+        </div>
+
+        <!-- Resume Grid Layout -->
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; width: 100%;">
           
-          <!-- Education Column -->
+          <!-- Education & Training Column -->
           <div>
             <h4 style="color:var(--gold-primary); font-size:18px; margin-bottom:15px;"><i class="fa-solid fa-graduation-cap"></i> Education</h4>
-            <div style="display:flex; flex-direction:column; gap:15px; border-left: 2px solid var(--gold-primary); padding-left: 15px;">
+            <div style="display:flex; flex-direction:column; gap:15px; border-left: 2px solid var(--gold-primary); padding-left: 15px; margin-bottom:25px;">
               <div>
                 <b style="color:#FFF;">B.E Mechanical Engineering (2024 - 2028)</b>
                 <div style="color:var(--text-secondary); font-size:13px;">Sri Shakthi Institute of Engineering and Technology</div>
@@ -460,39 +474,89 @@
               <div>
                 <b style="color:#FFF;">HSC (2023 - 2024)</b>
                 <div style="color:var(--text-secondary); font-size:13px;">Bishop Heber Higher Secondary School</div>
-                <div style="color:var(--gold-primary); font-size:13px; font-weight:bold;">Percentage: 80.6%</div>
+                <div style="color:var(--gold-primary); font-size:13px; font-weight:bold;">Percentage: 83.33%</div>
               </div>
               <div>
                 <b style="color:#FFF;">SSLC (2021 - 2022)</b>
                 <div style="color:var(--text-secondary); font-size:13px;">Sri Ramakrishna Vidyalaya Matriculation School</div>
-                <div style="color:var(--gold-primary); font-size:13px; font-weight:bold;">Percentage: 80.2%</div>
+                <div style="color:var(--gold-primary); font-size:13px; font-weight:bold;">Percentage: 80.6%</div>
+              </div>
+            </div>
+
+            <h4 style="color:var(--gold-primary); font-size:18px; margin-bottom:15px;"><i class="fa-solid fa-laptop-code"></i> Internship &amp; Training</h4>
+            <div style="border-left: 2px solid var(--gold-primary); padding-left: 15px;">
+              <b style="color:#FFF;">AI/ML Internship (Virtual/Online)</b>
+              <div style="color:var(--text-secondary); font-size:13px; margin-top:4px;">
+                • Learned Machine Learning algorithms, data preprocessing, and model building using Python.<br>
+                • Hands-on experience with real-world datasets in Jupyter Notebook and scikit-learn.<br>
+                • Tech Stack: Python, Pandas, NumPy, Matplotlib, Scikit-learn.
               </div>
             </div>
           </div>
 
-          <!-- Technical Skills Column -->
+          <!-- Projects Column -->
           <div>
-            <h4 style="color:var(--gold-primary); font-size:18px; margin-bottom:15px;"><i class="fa-solid fa-gears"></i> Technical Skills</h4>
-            <div style="display:flex; flex-wrap:wrap; gap:8px;">
-              <span class="tag">AutoCAD</span>
+            <h4 style="color:var(--gold-primary); font-size:18px; margin-bottom:15px;"><i class="fa-solid fa-diagram-project"></i> Featured Projects</h4>
+            <div style="display:flex; flex-direction:column; gap:12px;">
+              <div style="background:rgba(255,255,255,0.03); padding:10px 14px; border-radius:6px; border:1px solid rgba(255,255,255,0.05);">
+                <b style="color:#FFF; font-size:13.5px;">1. House Price Prediction</b>
+                <div style="color:var(--text-secondary); font-size:12px; margin-top:2px;">Built regression model using Python, Pandas, Scikit-learn.</div>
+              </div>
+              <div style="background:rgba(255,255,255,0.03); padding:10px 14px; border-radius:6px; border:1px solid rgba(255,255,255,0.05);">
+                <b style="color:#FFF; font-size:13.5px;">2. Movie Recommendation System</b>
+                <div style="color:var(--text-secondary); font-size:12px; margin-top:2px;">Content-based filtering using Cosine Similarity &amp; Streamlit.</div>
+              </div>
+              <div style="background:rgba(255,255,255,0.03); padding:10px 14px; border-radius:6px; border:1px solid rgba(255,255,255,0.05);">
+                <b style="color:#FFF; font-size:13.5px;">3. Student Performance Prediction</b>
+                <div style="color:var(--text-secondary); font-size:12px; margin-top:2px;">Predicted student scores using regression &amp; Seaborn charts.</div>
+              </div>
+              <div style="background:rgba(255,255,255,0.03); padding:10px 14px; border-radius:6px; border:1px solid rgba(255,255,255,0.05);">
+                <b style="color:#FFF; font-size:13.5px;">4. Image Classification using CNN</b>
+                <div style="color:var(--text-secondary); font-size:12px; margin-top:2px;">CNN model for CIFAR-10 image classification (TensorFlow/Keras).</div>
+              </div>
+              <div style="background:rgba(255,255,255,0.03); padding:10px 14px; border-radius:6px; border:1px solid rgba(255,255,255,0.05);">
+                <b style="color:#FFF; font-size:13.5px;">5. Web Application (To-Do List)</b>
+                <div style="color:var(--text-secondary); font-size:12px; margin-top:2px;">Interactive web app with add/delete tasks (HTML, CSS, JS).</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Technical & Personal Details Column -->
+          <div>
+            <h4 style="color:var(--gold-primary); font-size:18px; margin-bottom:15px;"><i class="fa-solid fa-gears"></i> Technical &amp; Soft Skills</h4>
+            <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:20px;">
+              <span class="tag">AutoCAD (2D &amp; 3D)</span>
               <span class="tag">SolidWorks</span>
               <span class="tag">C Programming</span>
               <span class="tag">Python</span>
               <span class="tag">Arduino</span>
-              <span class="tag">Basic Electronics</span>
+              <span class="tag">Machine Learning</span>
+              <span class="tag">Scikit-learn</span>
               <span class="tag">MS Office</span>
+              <span class="tag">Teamwork</span>
+              <span class="tag">Problem Solving</span>
+              <span class="tag">Adaptability</span>
             </div>
 
-            <h4 style="color:var(--gold-primary); font-size:18px; margin:20px 0 15px;"><i class="fa-solid fa-user"></i> Contact &amp; Personal Details</h4>
-            <div style="color:var(--text-secondary); font-size:13.5px; line-height:1.8;">
-              <div><b>Mobile:</b> +91 8870210399</div>
-              <div><b>Email:</b> haribalan3333@gmail.com</div>
+            <h4 style="color:var(--gold-primary); font-size:18px; margin-bottom:12px;"><i class="fa-solid fa-id-card"></i> Personal Details</h4>
+            <div style="color:var(--text-secondary); font-size:13px; line-height:1.8;">
               <div><b>DOB:</b> 03/12/2006</div>
-              <div><b>Languages:</b> English, Tamil</div>
-              <div><b>Location:</b> Mathur, Pudukkottai, Tamil Nadu</div>
+              <div><b>Gender / Status:</b> Male / Single</div>
+              <div><b>Nationality:</b> Indian</div>
+              <div><b>Languages:</b> English (Fluent), Tamil (Native), Hindi (Basic)</div>
+              <div><b>Email:</b> haribalans24me@srisakthi.ac.in</div>
+              <div><b>Location:</b> Mathur, Pudukkottai, Tamil Nadu - 622515</div>
             </div>
           </div>
 
+        </div>
+
+        <!-- PDF Preview Embed Container -->
+        <div style="width:100%; margin-top:10px;">
+          <h4 style="color:var(--gold-primary); font-size:16px; margin-bottom:10px;"><i class="fa-solid fa-file-pdf"></i> Resume Preview</h4>
+          <div style="width:100%; height:450px; border-radius:10px; overflow:hidden; border:1px solid rgba(212,175,55,0.3); background:#1e1e24;">
+            <iframe src="/assets/resume/haribalan_resume.pdf" style="width:100%; height:100%; border:none;" title="Haribalan S Resume PDF"></iframe>
+          </div>
         </div>
 
       </div>
