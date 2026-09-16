@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Optimization -->
+  <title>Hari Bala — Senior Frontend UI/UX Engineer & Creative Web Designer</title>
+  <meta name="description" content="Hari Bala is a Senior Frontend UI/UX Engineer and Creative Web Designer building premium, futuristic, and high-performance interactive web applications.">
+  <meta name="keywords" content="Hari Bala, Web Developer, UI/UX Engineer, Creative Web Designer, Portfolio, React, Frontend, Voice Assistant, HTML, CSS, JavaScript">
+  <meta name="author" content="Hari Bala">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Hari Bala — Senior Frontend UI/UX Engineer & Creative Web Designer">
+  <meta property="og:description" content="Futuristic AI-driven portfolio with smooth interactive animations and luxury black + gold theme.">
+  <meta property="og:image" content="/assets/hari-DDnkzFbE.jpeg">
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Modular Stylesheets -->
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/animations.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+  <script type="module" src="/src/main.jsx"></script>
+</head>
+<body>
+
+  <!-- Page Loader -->
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-logo">
+      <div class="loader-logo-mark">HB</div>
+      <span>Hari Bala</span>
+    </div>
+    <div class="loader-spinner"></div>
+  </div>
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress-container">
+    <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+  </div>
+
+  <!-- Background Visual Elements -->
+  <canvas id="fireCanvas"></canvas>
+  <div id="cursorRing"></div>
+  <div id="chatBubble"></div>
+  <div class="noise-overlay"></div>
+  <div class="starfield"></div>
+  <div class="aurora-bg">
+    <div class="aurora-blob a1"></div>
+    <div class="aurora-blob a2"></div>
+    <div class="aurora-blob a3"></div>
+  </div>
+  <div class="morphic-shape m1"></div>
+  <div class="morphic-shape m2"></div>
+
+  <!-- Floating Left Socials -->
+  <div class="floating-socials">
+    <a href="https://linkedin.com/in/hari-bala" target="_blank" rel="noopener" aria-label="LinkedIn Profile"><i class="fa-brands fa-linkedin-in"></i></a>
+    <a href="https://github.com/hari-bala" target="_blank" rel="noopener" aria-label="GitHub Profile"><i class="fa-brands fa-github"></i></a>
+    <a href="https://leetcode.com/hari-bala" target="_blank" rel="noopener" aria-label="LeetCode Profile"><i class="fa-solid fa-code"></i></a>
+    <a href="mailto:hari.bala@example.com" aria-label="Email Hari Bala"><i class="fa-regular fa-envelope"></i></a>
+  </div>
+
+  <!-- Floating Back To Top (Fire Arrow) -->
+  <a href="#" class="back-to-top" id="backToTop" aria-label="Back To Top">
+    <div class="fire-arrow-wrapper">
+      <div class="fire-flame"></div>
+      <i class="fa-solid fa-arrow-up"></i>
+    </div>
+  </a>
+
+  <!-- Header & Sticky Navbar -->
+  <header>
+    <nav class="wrap">
+      <a href="#home" class="brand" aria-label="Hari Bala Home">
+        <div class="brand-mark">HB</div>
+        <span>Hari Bala</span>
+      </a>
+      <div class="nav-links">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle Light/Dark Theme">🌙 Dark Mode</button>
+        <button class="menu-btn" id="menuBtn" aria-label="Open Mobile Menu"><i class="fa-solid fa-bars-staggered"></i></button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Nav Drawer -->
+  <div class="mobile-nav-overlay" id="mobileOverlay"></div>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#home" class="active">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#resume">Resume</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <!-- Main Workspace -->
+  <main class="wrap">
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+      <div class="reveal-item reveal-fade-up">
+        <span class="eyebrow">AI VOICE ASSISTANT AGENT</span>
+        <h1 class="title">Hello, I'm <span class="name">Hari Bala 👋</span></h1>
+        <div class="role">
+          Senior Frontend UI/UX Engineer &amp; Creative Web Designer
+          <span class="cursor-blink"></span>
+        </div>
+        <p class="lede">I craft highly premium web applications with smooth interaction designs and visual excellence. Ask me anything out loud, or use the interactive console below to learn more about my craft.</p>
+        <div class="hero-ctas">
+          <button class="btn-primary" id="talkBtn">🎙️ Talk With Me</button>
+          <div class="listen-tag" id="listenTag" style="display:none;"><span class="dot"></span> Listening...</div>
+        </div>
+        <div class="wave" id="waveBars">
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+
+      <div class="halo-wrap reveal-item reveal-zoom-in">
+        <div class="halo-ring r1"></div>
+        <div class="halo-ring r2"></div>
+        <div class="halo-ring r3"></div>
+        <div class="orbit-dot"></div>
+        <div class="photo-frame tilt-effect">
+          <img src="/assets/hari-DDnkzFbE.jpeg" alt="Hari Bala portrait image">
+        </div>
+      </div>
+
+      <div class="glass-card can-do reveal-item reveal-fade-up">
+        <h3>What I Can Do</h3>
+        <div class="can-do-item">
+          <div class="ic"><i class="fa-regular fa-comment-dots"></i></div>
+          <div>
+            <b>Answer Questions</b>
+            <span>Ask me anything!</span>
+          </div>
+        </div>
+        <div class="can-do-item">
+          <div class="ic"><i class="fa-solid fa-volume-high"></i></div>
+          <div>
+            <b>Talk Naturally</b>
+            <span>I understand you.</span>
+          </div>
+        </div>
+        <div class="can-do-item">
+          <div class="ic"><i class="fa-solid fa-book-open"></i></div>
+          <div>
+            <b>Share Knowledge</b>
+            <span>Let's learn together.</span>
+          </div>
+        </div>
+        <div class="can-do-item">
+          <div class="ic"><i class="fa-solid fa-circle-nodes"></i></div>
+          <div>
+            <b>Help &amp; Assist</b>
+            <span>I'm here to help!</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- REACT GAME ZONE (Hero Section Bottom Half) -->
+      <div class="react-games-container" style="grid-column: 1 / -1; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px;">
+        <div id="react-game-zone-left"></div>
+        <div id="react-game-zone-right"></div>
+      </div>
+    </section>
+
+    <!-- ASSISTANT & TRANSLATOR PANEL -->
+    <div class="panel-row reveal-item reveal-fade-up">
+      <div class="glass-card panel">
+        <div class="panel-head">
+          <div class="ic-badge"><i class="fa-solid fa-globe"></i></div>
+          <h3>Language Translator</h3>
+        </div>
+        <div class="translate-grid">
+          <select id="fromLang" aria-label="Source Language">
+            <option value="auto">Detect Language</option>
+            <option value="en">English</option>
+            <option value="ta">Tamil</option>
+            <option value="hi">Hindi</option>
+            <option value="fr">French</option>
+            <option value="es">Spanish</option>
+          </select>
+          <button class="swap-ic" id="swapLang" aria-label="Swap Languages">⇄</button>
+          <select id="toLang" aria-label="Target Language">
+            <option value="en">English</option>
+            <option value="ta">Tamil</option>
+            <option value="hi">Hindi</option>
+            <option value="fr">French</option>
+            <option value="es">Spanish</option>
+          </select>
+        </div>
+        <textarea id="srcText" placeholder="Type text here to translate..."></textarea>
+        <textarea id="outText" placeholder="Translation will appear here..." readonly style="margin-top:12px; color:var(--gold-primary); font-weight: 500;"></textarea>
+        <button class="btn-gold" id="translateBtn">Translate ✨</button>
+      </div>
+
+      <div class="glass-card panel">
+        <div class="panel-head">
+          <div class="ic-badge"><i class="fa-solid fa-bolt"></i></div>
+          <h3>Quick Console</h3>
+        </div>
+        <div class="quick-actions">
+          <button class="qa-btn" data-say="hello"><span class="ic">👋</span>Say Hello</button>
+          <button class="qa-btn" data-say="about"><span class="ic">👤</span>About Me</button>
+          <button class="qa-btn" data-say="skills"><span class="ic">💻</span>My Skills</button>
+          <button class="qa-btn" data-say="projects"><span class="ic">💼</span>My Projects</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
+      <span class="section-tag">// 01 Identity</span>
+      <h2 class="section-title">About <span>Me</span></h2>
+      <div class="about-grid reveal-item reveal-fade-up">
+        <div class="about-photo">
+          <img src="/assets/hari-DDnkzFbE.jpeg" alt="Hari Bala creative photo">
+        </div>
+        <div class="about-text">
+          <p>I’m an engineering student known for my bold, energetic, and highly driven personality. I don’t shy away from challenges—in fact, I often question existing ideas and push boundaries to find better solutions. My “naughty” side reflects creativity and curiosity, while my aggressive approach translates into strong determination, quick decision-making, and a results-oriented mindset.</p>
+          <p>I thrive in fast-paced environments where innovation, problem-solving, and resilience are valued. Whether working on technical projects or collaborating in teams, I bring passion, confidence, and a willingness to learn from every experience. Always ready to take initiative, challenge norms, and grow both technically and personally.</p>
+          <div class="stat-row">
+            <div class="stat">
+              <b class="stat-count" data-target="15">15+</b>
+              <span>Projects Built</span>
+            </div>
+            <div class="stat">
+              <b class="stat-count" data-target="4">4+</b>
+              <span>Tech Stacks</span>
+            </div>
+            <div class="stat">
+              <b class="stat-count" data-target="24" data-format="time">24/7</b>
+              <span>Curious Mode</span>
+            </div>
+          </div>
+      </div>
+
+      <!-- REACT GALLERY ROOT (Photos & Videos placed BEFORE Experience & Milestones) -->
+      <div id="react-gallery-root" style="margin-top: 50px;"></div>
+
+      <!-- Animated Timeline -->
+      <div class="timeline-section reveal-item reveal-fade-up">
+        <h3 class="timeline-title"><i class="fa-solid fa-graduation-cap"></i> Experience &amp; Milestones</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <span class="timeline-date">2024 — 2028</span>
+            <div class="glass-card timeline-content">
+              <h4>🎓 B.E Mechanical Engineering</h4>
+              <h5>Sri Shakthi Institute of Engineering and Technology</h5>
+              <p style="font-weight: bold; margin-top: 6px;">CGPA: 8.5</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <span class="timeline-date">2023 — 2024</span>
+            <div class="glass-card timeline-content">
+              <h4>🎓 Higher Secondary (HSC)</h4>
+              <h5>Bishop Heber Higher Secondary School</h5>
+              <p style="font-weight: bold; margin-top: 6px;">Percentage: 80.6%</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <span class="timeline-date">2021 — 2022</span>
+            <div class="glass-card timeline-content">
+              <h4>🎓 Secondary School (SSLC)</h4>
+              <h5>Sri Ramakrishna Vidyalaya Matriculation School</h5>
+              <p style="font-weight: bold; margin-top: 6px;">Percentage: 80.2%</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills">
+      <span class="section-tag">// 02 Toolkit</span>
+      <h2 class="section-title">My <span>Skills</span></h2>
+      <div class="skills-container">
+        
+        <!-- Skill Category 1 -->
+        <div class="skill-category-block reveal-item reveal-fade-up">
+          <h3 class="skill-category-title">Frontend Engineering</h3>
+          <div class="skills-grid">
+            <div class="glass-card skill-chip reveal-item" data-pct="90">
+              <div class="skill-chip-icon"><i class="fa-brands fa-html5"></i></div>
+              <div class="name">HTML5</div>
+              <div class="circular-progress-wrap">
+                <svg>
+                  <defs>
+                    <linearGradient id="gold-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#FFD700" />
+                      <stop offset="50%" stop-color="#D4AF37" />
+                      <stop offset="100%" stop-color="#AA7C11" />
+                    </linearGradient>
+                  </defs>
+                  <circle class="circular-progress-bg" cx="40" cy="40" r="36" />
+                  <circle class="circular-progress-val" cx="40" cy="40" r="36" />
+                </svg>
+                <div class="circular-progress-text">0%</div>
+              </div>
+            </div>
+
+            <div class="glass-card skill-chip reveal-item" data-pct="85">
+              <div class="skill-chip-icon"><i class="fa-brands fa-css3-alt"></i></div>
+              <div class="name">CSS3</div>
+              <div class="circular-progress-wrap">
+                <svg>
+                  <circle class="circular-progress-bg" cx="40" cy="40" r="36" />
+                  <circle class="circular-progress-val" cx="40" cy="40" r="36" />
+                </svg>
+                <div class="circular-progress-text">0%</div>
+              </div>
+            </div>
+
+            <div class="glass-card skill-chip reveal-item" data-pct="80">
+              <div class="skill-chip-icon"><i class="fa-brands fa-js"></i></div>
+              <div class="name">JavaScript</div>
+              <div class="circular-progress-wrap">
+                <svg>
+                  <circle class="circular-progress-bg" cx="40" cy="40" r="36" />
+                  <circle class="circular-progress-val" cx="40" cy="40" r="36" />
+                </svg>
+                <div class="circular-progress-text">0%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skill Category 2 -->
+        <div class="skill-category-block reveal-item reveal-fade-up">
+          <h3 class="skill-category-title">Backend &amp; Databases</h3>
+          <div class="skills-grid">
+            <div class="glass-card skill-chip reveal-item" data-pct="70">
+              <div class="skill-chip-icon"><i class="fa-brands fa-node-js"></i></div>
+              <div class="name">Node.js</div>
+              <div class="circular-progress-wrap">
+                <svg>
+                  <circle class="circular-progress-bg" cx="40" cy="40" r="36" />
+                  <circle class="circular-progress-val" cx="40" cy="40" r="36" />
+                </svg>
+                <div class="circular-progress-text">0%</div>
+              </div>
+            </div>
+
+            <div class="glass-card skill-chip reveal-item" data-pct="65">
+              <div class="skill-chip-icon"><i class="fa-solid fa-code-branch"></i></div>
+              <div class="name">Git</div>
+              <div class="circular-progress-wrap">
+                <svg>
+                  <circle class="circular-progress-bg" cx="40" cy="40" r="36" />
+                  <circle class="circular-progress-val" cx="40" cy="40" r="36" />
+                </svg>
+                <div class="circular-progress-text">0%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects">
+      <span class="section-tag">// 03 Work</span>
+      <h2 class="section-title">Projects <span>(Robotics &amp; Automation)</span></h2>
+      <div class="proj-grid">
+        
+        <!-- Project One: Voice Control Robotic Car -->
+        <div class="glass-card proj-card reveal-item reveal-fade-up">
+          <div class="proj-thumb"><i class="fa-solid fa-car-side"></i></div>
+          <div class="proj-body">
+            <h4>Voice Control Robotic Car</h4>
+            <div style="color:var(--gold-primary); font-size:12px; font-weight:bold; margin-bottom:8px;">1st Project (SEM 3)</div>
+            <p>Designed and implemented a Voice-Controlled Robotic Car using Arduino Uno, HC-05 Bluetooth, and an Android app, enabling real-time navigation (forward, backward, turn, stop) via speech recognition.</p>
+            <div class="tag-row">
+              <span class="tag">Arduino Uno</span>
+              <span class="tag">HC-05 Bluetooth</span>
+              <span class="tag">Android App</span>
+              <span class="tag">Speech Recognition</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Two: Voice Control Mini Forklift -->
+        <div class="glass-card proj-card reveal-item reveal-fade-up">
+          <div class="proj-thumb"><i class="fa-solid fa-truck-ramp-box"></i></div>
+          <div class="proj-body">
+            <h4>Voice Control Mini Forklift</h4>
+            <div style="color:var(--gold-primary); font-size:12px; font-weight:bold; margin-bottom:8px;">2nd Project (SEM 4)</div>
+            <p>Developed a voice-operated forklift using Arduino, implemented voice command control system, reduced manual effort and improved automation.</p>
+            <div class="tag-row">
+              <span class="tag">Arduino</span>
+              <span class="tag">Voice Command</span>
+              <span class="tag">Industrial Automation</span>
+              <span class="tag">Robotics</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Three: CAD & Electronics -->
+        <div class="glass-card proj-card reveal-item reveal-fade-up">
+          <div class="proj-thumb"><i class="fa-solid fa-compass-drafting"></i></div>
+          <div class="proj-body">
+            <h4>Mechanical CAD &amp; Automation</h4>
+            <div style="color:var(--gold-primary); font-size:12px; font-weight:bold; margin-bottom:8px;">Design &amp; Simulation</div>
+            <p>Mechanical design, component modeling, and circuit integration using AutoCAD, SolidWorks, C Programming, Python, and Basic Electronics.</p>
+            <div class="tag-row">
+              <span class="tag">AutoCAD</span>
+              <span class="tag">SolidWorks</span>
+              <span class="tag">C / Python</span>
+              <span class="tag">Basic Electronics</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- RESUME SECTION -->
+    <section id="resume">
+      <span class="section-tag">// 04 Background</span>
+      <h2 class="section-title">My <span>Resume</span></h2>
+      <div class="glass-card resume-box reveal-item reveal-fade-up" style="flex-direction: column; align-items: flex-start; gap: 24px;">
+        
+        <div style="display: flex; justify-content: space-between; width: 100%; flex-wrap: wrap; gap: 20px; border-bottom: 1px solid rgba(212,175,55,0.2); padding-bottom: 20px;">
+          <div>
+            <h2 style="color:var(--gold-primary); font-family:var(--font-display); margin:0;">HARIBALAN S</h2>
+            <p style="color:var(--text-secondary); font-size:16px; margin:4px 0 0;">Mechanical Engineering Student | Sri Shakthi Institute of Engineering and Technology</p>
+          </div>
+          <a class="btn-primary" href="assets/resume/resume.pdf" id="resumeBtn" download="Haribalan_S_Resume.pdf"><i class="fa-solid fa-download"></i> Download PDF Resume</a>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; width: 100%;">
+          
+          <!-- Education Column -->
+          <div>
+            <h4 style="color:var(--gold-primary); font-size:18px; margin-bottom:15px;"><i class="fa-solid fa-graduation-cap"></i> Education</h4>
+            <div style="display:flex; flex-direction:column; gap:15px; border-left: 2px solid var(--gold-primary); padding-left: 15px;">
+              <div>
+                <b style="color:#FFF;">B.E Mechanical Engineering (2024 - 2028)</b>
+                <div style="color:var(--text-secondary); font-size:13px;">Sri Shakthi Institute of Engineering and Technology</div>
+                <div style="color:var(--gold-primary); font-size:13px; font-weight:bold;">CGPA: 8.5</div>
+              </div>
+              <div>
+                <b style="color:#FFF;">HSC (2023 - 2024)</b>
+                <div style="color:var(--text-secondary); font-size:13px;">Bishop Heber Higher Secondary School</div>
+                <div style="color:var(--gold-primary); font-size:13px; font-weight:bold;">Percentage: 80.6%</div>
+              </div>
+              <div>
+                <b style="color:#FFF;">SSLC (2021 - 2022)</b>
+                <div style="color:var(--text-secondary); font-size:13px;">Sri Ramakrishna Vidyalaya Matriculation School</div>
+                <div style="color:var(--gold-primary); font-size:13px; font-weight:bold;">Percentage: 80.2%</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Technical Skills Column -->
+          <div>
+            <h4 style="color:var(--gold-primary); font-size:18px; margin-bottom:15px;"><i class="fa-solid fa-gears"></i> Technical Skills</h4>
+            <div style="display:flex; flex-wrap:wrap; gap:8px;">
+              <span class="tag">AutoCAD</span>
+              <span class="tag">SolidWorks</span>
+              <span class="tag">C Programming</span>
+              <span class="tag">Python</span>
+              <span class="tag">Arduino</span>
+              <span class="tag">Basic Electronics</span>
+              <span class="tag">MS Office</span>
+            </div>
+
+            <h4 style="color:var(--gold-primary); font-size:18px; margin:20px 0 15px;"><i class="fa-solid fa-user"></i> Contact &amp; Personal Details</h4>
+            <div style="color:var(--text-secondary); font-size:13.5px; line-height:1.8;">
+              <div><b>Mobile:</b> +91 8870210399</div>
+              <div><b>Email:</b> haribalan3333@gmail.com</div>
+              <div><b>DOB:</b> 03/12/2006</div>
+              <div><b>Languages:</b> English, Tamil</div>
+              <div><b>Location:</b> Mathur, Pudukkottai, Tamil Nadu</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+      <span class="section-tag">// 05 Reach Out</span>
+      <h2 class="section-title">Connect With <span>Me</span></h2>
+      <div class="connect-grid reveal-item reveal-fade-up">
+        <a class="glass-card connect-card connect-github" href="https://github.com/haribalan3333-huegithub" target="_blank" rel="noopener noreferrer">
+          <div class="ic"><i class="fa-brands fa-github"></i></div>
+          <b>GitHub</b>
+          <span>haribalan3333-huegithub →</span>
+        </a>
+        <a class="glass-card connect-card connect-insta" href="https://www.instagram.com/balan_hari_003?utm_source=qr&amp;igsh=bjA5YXdjbnd3aHgz" target="_blank" rel="noopener noreferrer">
+          <div class="ic"><i class="fa-brands fa-instagram"></i></div>
+          <b>Instagram</b>
+          <span>@balan_hari_003 →</span>
+        </a>
+        <a class="glass-card connect-card connect-linkedin" href="https://www.linkedin.com/in/hari-balan-s-82b356247?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" target="_blank" rel="noopener noreferrer">
+          <div class="ic"><i class="fa-brands fa-linkedin-in"></i></div>
+          <b>LinkedIn</b>
+          <span>Hari Balan S →</span>
+        </a>
+        <a class="glass-card connect-card" href="mailto:haribalan3333@gmail.com">
+          <div class="ic"><i class="fa-regular fa-envelope"></i></div>
+          <b>Email Me</b>
+          <span>haribalan3333@gmail.com →</span>
+        </a>
+        <a class="glass-card connect-card" href="tel:+918870210399">
+          <div class="ic"><i class="fa-solid fa-phone"></i></div>
+          <b>Phone</b>
+          <span>+91 8870210399 →</span>
+        </a>
+      </div>
+
+      <div style="height:48px;"></div>
+
+      <div class="glass-card feature-strip reveal-item reveal-fade-up">
+        <div class="f">
+          <div class="ic"><i class="fa-solid fa-robot"></i></div>
+          <b>3D AI Agent</b>
+          <span>Interactive assistant.</span>
+        </div>
+        <div class="f">
+          <div class="ic"><i class="fa-solid fa-microphone"></i></div>
+          <b>Voice Enabled</b>
+          <span>Listen &amp; respond.</span>
+        </div>
+        <div class="f">
+          <div class="ic"><i class="fa-solid fa-language"></i></div>
+          <b>Multi-Language</b>
+          <span>Instant translations.</span>
+        </div>
+        <div class="f">
+          <div class="ic"><i class="fa-solid fa-circle-check"></i></div>
+          <b>Always Active</b>
+          <span>24/7 online presence.</span>
+        </div>
+        <div class="f">
+          <div class="ic"><i class="fa-solid fa-display"></i></div>
+          <b>Fully Responsive</b>
+          <span>Adaptive interfaces.</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Animated Footer & Speech Console -->
+  <footer>
+    <div class="wrap">
+      <div class="foot-row reveal-item">
+        <div class="foot-avatar"><img src="/assets/hari-DDnkzFbE.jpeg" alt="Hari Bala portrait avatar"></div>
+        <div class="foot-input">
+          <input type="text" id="chatInput" placeholder="Type a message or ask me a question..." aria-label="Chat input">
+          <button class="icon-btn send" id="chatSend">Send <i class="fa-regular fa-paper-plane"></i></button>
+          <button class="icon-btn" id="chatClear"><i class="fa-regular fa-trash-can"></i> Clear</button>
+        </div>
+      </div>
+      <div class="assistant-say" id="assistantSay"></div>
+      <div class="foot-copy">
+        &copy; 2026 Hari Bala's AI Portfolio. All rights reserved.<br>
+        Built with Premium UX Standards &amp; Smooth Animations.
+      </div>
+    </div>
+  </footer>
+
+  <!-- React App Mount Roots & Scripts -->
+  <div id="react-translator-root"></div>
+  <div id="react-ai-assistant-root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+  <script src="/js/theme.js"></script>
+  <script src="/js/cursor.js"></script>
+  <script src="/js/assistant.js"></script>
+  <script src="/js/voice.js"></script>
+  <script src="/js/translator.js"></script>
+  <script src="/js/animation.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>

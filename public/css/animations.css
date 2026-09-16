@@ -1,0 +1,324 @@
+/* ==========================================================================
+   ANIMATIONS.CSS - High Performance 60FPS CSS Animations & Visual Effects
+   ========================================================================== */
+
+/* 1. Page Loader & Sliding Spinners */
+@keyframes loader-slide {
+  0% { left: -40%; }
+  50% { left: 100%; }
+  100% { left: 100%; }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes spin-reverse {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+/* 2. Keyframes for pulsing glows & rings */
+@keyframes pulse-ring {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4), var(--gold-glow);
+  }
+  50% {
+    transform: scale(1.03);
+    box-shadow: 0 0 0 10px rgba(212, 175, 55, 0), var(--gold-glow-intense);
+  }
+}
+
+@keyframes pulse-button {
+  0% {
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+  }
+  100% {
+    box-shadow: 0 6px 30px rgba(255, 90, 31, 0.65), 0 0 15px rgba(212, 175, 55, 0.4);
+  }
+}
+
+@keyframes wave-bar {
+  0%, 100% { transform: scaleY(0.2); }
+  50% { transform: scaleY(1); }
+}
+
+@keyframes orbit {
+  from { transform: rotate(0deg) translateX(190px) rotate(0deg); }
+  to { transform: rotate(360deg) translateX(190px) rotate(-360deg); }
+}
+
+@keyframes shine-gold {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 3. Shooting Stars Effect */
+.starfield {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.shooting-star {
+  position: absolute;
+  top: var(--star-top);
+  left: var(--star-left);
+  width: 100px;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(212, 175, 55, 0.8) 0%, transparent 100%);
+  animation: shoot var(--star-duration) var(--star-delay) linear infinite;
+  opacity: 0;
+  transform: rotate(-45deg);
+}
+
+@keyframes shoot {
+  0% {
+    transform: translate(0, 0) rotate(-45deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(-300px, 300px) rotate(-45deg);
+    opacity: 0;
+  }
+}
+
+/* 4. Animated Aurora / Blob Backdrop */
+.aurora-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  filter: blur(100px);
+  opacity: 0.35;
+}
+
+[data-theme="light"] .aurora-bg {
+  opacity: 0.15;
+}
+
+.aurora-blob {
+  position: absolute;
+  border-radius: 50%;
+  mix-blend-mode: screen;
+}
+
+.aurora-blob.a1 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.25) 0%, transparent 70%);
+  top: -100px;
+  left: 20%;
+  animation: blob-drift 22s infinite alternate ease-in-out;
+}
+
+.aurora-blob.a2 {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(255, 90, 31, 0.18) 0%, transparent 70%);
+  bottom: -200px;
+  right: 15%;
+  animation: blob-drift 28s infinite alternate-reverse ease-in-out;
+}
+
+.aurora-blob.a3 {
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, transparent 70%);
+  top: 40%;
+  left: -150px;
+  animation: blob-drift 18s infinite alternate ease-in-out;
+}
+
+@keyframes blob-drift {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(80px, 60px) scale(1.1) rotate(45deg); }
+  100% { transform: translate(-40px, 120px) scale(0.9) rotate(90deg); }
+}
+
+/* Morphing Glowing Shapes (3D Futuristic feel) */
+.morphic-shape {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(45deg, rgba(212, 175, 55, 0.05) 0%, rgba(255, 90, 31, 0.02) 100%);
+  border: 1px solid rgba(212, 175, 55, 0.08);
+  box-shadow: inset var(--gold-glow);
+  animation: morph-shape 12s infinite alternate ease-in-out;
+}
+
+.morphic-shape.m1 {
+  width: 140px;
+  height: 140px;
+  top: 15%;
+  right: 8%;
+  border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+}
+
+.morphic-shape.m2 {
+  width: 180px;
+  height: 180px;
+  bottom: 20%;
+  left: 5%;
+  border-radius: 50% 50% 30% 70% / 50% 60% 40% 50%;
+  animation-duration: 16s;
+  animation-delay: -2s;
+}
+
+@keyframes morph-shape {
+  0% {
+    border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    border-radius: 70% 30% 52% 48% / 60% 40% 60% 40%;
+    transform: translateY(-20px) rotate(90deg);
+  }
+  100% {
+    border-radius: 30% 70% 70% 30% / 50% 30% 70% 50%;
+    transform: translateY(10px) rotate(180deg);
+  }
+}
+
+/* Noise overlay */
+.noise-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.04;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+/* 5. Reveal / Entrance Animations (ScrollTrigger/IntersectionObserver enabled) */
+
+/* Initial state for elements to reveal */
+.reveal-item {
+  opacity: 0;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+
+.reveal-fade-up {
+  transform: translateY(40px);
+}
+
+.reveal-fade-left {
+  transform: translateX(-40px);
+}
+
+.reveal-fade-right {
+  transform: translateX(40px);
+}
+
+.reveal-zoom-in {
+  transform: scale(0.9);
+}
+
+/* Active reveal state */
+.reveal-item.active {
+  opacity: 1;
+  transform: translate(0) scale(1);
+}
+
+/* 6. Ripple Effect */
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(212, 175, 55, 0.25);
+  transform: scale(0);
+  animation: rip 0.6s linear;
+  pointer-events: none;
+}
+
+@keyframes rip {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+/* 7. Card Hover Glow Effect */
+.card-hover-glow {
+  position: absolute;
+  inset: -1px;
+  background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(212, 175, 55, 0.15), transparent 40%);
+  z-index: 1;
+  opacity: 0;
+  border-radius: inherit;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+.glass-card:hover .card-hover-glow {
+  opacity: 1;
+}
+
+/* 8. Animated Borders */
+.animated-border {
+  position: relative;
+  overflow: hidden;
+}
+
+.animated-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(to right, var(--gold-primary), transparent, var(--accent-color), transparent);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: border-rotate 6s linear infinite;
+}
+
+@keyframes border-rotate {
+  100% { filter: hue-rotate(360deg); }
+}
+
+/* 9. Floating Social & Icons animations */
+@keyframes float-icon {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.float-animation {
+  animation: float-icon 4s ease-in-out infinite;
+}
+
+/* 10. Fireflies (Particle background) */
+.firefly {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: var(--gold-primary);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--gold-primary);
+  pointer-events: none;
+  animation: drift var(--firefly-duration) infinite alternate ease-in-out, fade var(--firefly-duration) infinite ease-in-out;
+}
+
+@keyframes drift {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(var(--firefly-drift-x), var(--firefly-drift-y)); }
+}
+
+@keyframes fade {
+  0%, 100% { opacity: 0; }
+  50% { opacity: var(--firefly-opacity); }
+}

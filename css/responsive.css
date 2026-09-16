@@ -1,0 +1,290 @@
+/* ==========================================================================
+   RESPONSIVE.CSS - Media Queries and Adaptive Layouts
+   ========================================================================== */
+
+/* 1. Large Devices & Desktops (max-width: 1200px) */
+@media (max-width: 1200px) {
+  .wrap {
+    max-width: 960px;
+  }
+  
+  .hero {
+    grid-template-columns: 1.1fr 1fr;
+    gap: 24px;
+  }
+  
+  .can-do {
+    grid-column: span 2;
+    margin-top: 20px;
+  }
+  
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .proj-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 2. Laptops & Tablets (max-width: 980px) */
+@media (max-width: 980px) {
+  .wrap {
+    max-width: 720px;
+  }
+
+  /* Navbar Adjustments */
+  .nav-links {
+    display: none; /* Hidden, mobile menu drawer handles navigation */
+  }
+
+  .menu-btn {
+    display: flex; /* Mobile menu drawer trigger visible */
+  }
+
+  /* Hero Section */
+  .hero {
+    grid-template-columns: 1fr;
+    padding-top: 120px;
+    text-align: center;
+  }
+
+  .eyebrow {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .lede {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-ctas {
+    justify-content: center;
+  }
+
+  .wave {
+    justify-content: center;
+  }
+
+  .halo-wrap {
+    order: -1; /* Display portrait above text */
+    height: 380px;
+    margin-bottom: 24px;
+  }
+
+  .halo-ring.r1 { width: 340px; height: 340px; }
+  .halo-ring.r2 { width: 290px; height: 290px; }
+  .halo-ring.r3 { width: 240px; height: 240px; }
+  .photo-frame { width: 220px; height: 285px; }
+
+  .can-do {
+    grid-column: span 1;
+    margin-top: 32px;
+    text-align: left;
+  }
+
+  /* Panels (Translator / Quick Actions) */
+  .panel-row {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  /* About Section */
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-photo {
+    max-width: 400px;
+    margin: 0 auto;
+    aspect-ratio: 1/1; /* Square portrait on smaller screens */
+  }
+
+  .stat-row {
+    justify-content: center;
+  }
+
+  /* Skills Section */
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Projects */
+  .proj-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Contact Cards */
+  .connect-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Feature Strip */
+  .feature-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .feature-strip .f {
+    border-bottom: 1px solid var(--panel-border);
+  }
+
+  .feature-strip .f:nth-child(even) {
+    border-right: none;
+  }
+
+  .feature-strip .f:last-child {
+    border-bottom: none;
+    grid-column: span 2;
+    border-right: none;
+  }
+
+  /* Footer layout */
+  .foot-row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .foot-avatar {
+    margin: 0 auto;
+  }
+
+  .foot-input {
+    width: 100%;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .foot-copy {
+    text-align: center;
+    margin-top: 24px;
+  }
+  
+  /* Floating elements adjustments */
+  .floating-socials {
+    display: none; /* Hide floating social bar on mobile/tablet to avoid overlap */
+  }
+  
+  .back-to-top {
+    bottom: 24px;
+    left: 24px;
+  }
+  
+  #chatBubble {
+    bottom: 90px;
+    right: 24px;
+    left: 24px;
+    max-width: calc(100% - 48px);
+  }
+}
+
+/* 3. Mobile Portrait (max-width: 576px) */
+@media (max-width: 576px) {
+  .wrap {
+    padding: 0 16px;
+  }
+
+  section {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    margin-bottom: 32px;
+  }
+
+  /* Hero adjustments */
+  h1.title {
+    font-size: 34px;
+  }
+
+  .role {
+    font-size: 16px;
+    justify-content: center;
+  }
+
+  .hero-ctas {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .btn-primary, .listen-tag {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .halo-wrap {
+    height: 320px;
+  }
+
+  .halo-ring.r1 { width: 280px; height: 280px; }
+  .halo-ring.r2 { width: 240px; height: 240px; }
+  .halo-ring.r3 { width: 200px; height: 200px; }
+  .photo-frame { width: 180px; height: 230px; }
+
+  /* Translator grid */
+  .translate-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  
+  .swap-ic {
+    margin: 4px auto;
+    transform: rotate(90deg);
+  }
+  
+  .swap-ic:hover {
+    transform: rotate(270deg);
+  }
+
+  .quick-actions {
+    grid-template-columns: 1fr;
+  }
+
+  /* About stat spacing */
+  .stat-row {
+    gap: 20px;
+  }
+
+  .stat b {
+    font-size: 26px;
+  }
+
+  /* Timelines and Skills cards */
+  .timeline {
+    padding-left: 20px;
+  }
+
+  .timeline-dot {
+    left: -29px;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Projects cards */
+  .proj-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Connect cards */
+  .connect-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Feature Strip */
+  .feature-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-strip .f {
+    border-right: none;
+    border-bottom: 1px solid var(--panel-border);
+  }
+
+  .feature-strip .f:last-child {
+    grid-column: span 1;
+  }
+}
