@@ -8,10 +8,11 @@ import './styles/gallery.css';
 import './styles/translator.css';
 import './styles/assistant.css';
 
-document.addEventListener('DOMContentLoaded', () => {
+function mountAll() {
   // Game Zone Left
   const gameZoneLeft = document.getElementById('react-game-zone-left');
-  if (gameZoneLeft) {
+  if (gameZoneLeft && !gameZoneLeft.dataset.mounted) {
+    gameZoneLeft.dataset.mounted = 'true';
     ReactDOM.createRoot(gameZoneLeft).render(
       <React.StrictMode>
         <GameZoneLeft />
@@ -21,7 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Game Zone Right
   const gameZoneRight = document.getElementById('react-game-zone-right');
-  if (gameZoneRight) {
+  if (gameZoneRight && !gameZoneRight.dataset.mounted) {
+    gameZoneRight.dataset.mounted = 'true';
     ReactDOM.createRoot(gameZoneRight).render(
       <React.StrictMode>
         <GameZoneRight />
@@ -31,7 +33,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Gallery
   const galleryRoot = document.getElementById('react-gallery-root');
-  if (galleryRoot) {
+  if (galleryRoot && !galleryRoot.dataset.mounted) {
+    galleryRoot.dataset.mounted = 'true';
     ReactDOM.createRoot(galleryRoot).render(
       <React.StrictMode>
         <GallerySection />
@@ -41,7 +44,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Translator
   const translatorRoot = document.getElementById('react-translator-root');
-  if (translatorRoot) {
+  if (translatorRoot && !translatorRoot.dataset.mounted) {
+    translatorRoot.dataset.mounted = 'true';
     ReactDOM.createRoot(translatorRoot).render(
       <React.StrictMode>
         <TranslatorWidget />
@@ -51,11 +55,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 3D Girl AI Assistant
   const aiAssistantRoot = document.getElementById('react-ai-assistant-root');
-  if (aiAssistantRoot) {
+  if (aiAssistantRoot && !aiAssistantRoot.dataset.mounted) {
+    aiAssistantRoot.dataset.mounted = 'true';
     ReactDOM.createRoot(aiAssistantRoot).render(
       <React.StrictMode>
         <AIAssistantWidget />
       </React.StrictMode>
     );
   }
-});
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', mountAll);
+} else {
+  mountAll();
+}

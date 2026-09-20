@@ -115,10 +115,10 @@
         <span class="eyebrow">AI VOICE ASSISTANT AGENT</span>
         <h1 class="title">Hello, I'm <span class="name">Hari Bala 👋</span></h1>
         <div class="role">
-          Senior Frontend UI/UX Engineer &amp; Creative Web Designer
+          Mechanical Engineering Student | Python Developer &amp; AI/ML Enthusiast
           <span class="cursor-blink"></span>
         </div>
-        <p class="lede">I craft highly premium web applications with smooth interaction designs and visual excellence. Ask me anything out loud, or use the interactive console below to learn more about my craft.</p>
+        <p class="lede">“Learn • Build • Create • Grow” — Motivated Mechanical Engineering student passionate about Python, Artificial Intelligence, Robotics &amp; Automation. Explore my projects, interactive tools, and resume below.</p>
         <div class="hero-ctas">
           <button class="btn-primary" id="talkBtn">🎙️ Talk With Me</button>
           <div class="listen-tag" id="listenTag" style="display:none;"><span class="dot"></span> Listening...</div>
@@ -186,37 +186,81 @@
         </div>
         <div class="translate-grid">
           <select id="fromLang" aria-label="Source Language">
-            <option value="auto">Detect Language</option>
+            <option value="auto">✨ Detect Language</option>
             <option value="en">English</option>
-            <option value="ta">Tamil</option>
-            <option value="hi">Hindi</option>
-            <option value="fr">French</option>
-            <option value="es">Spanish</option>
+            <option value="ta">Tamil (தமிழ்)</option>
+            <option value="si">Sinhala (සිංහල)</option>
+            <option value="hi">Hindi (हिंदी)</option>
+            <option value="ml">Malayalam (മലയാളം)</option>
+            <option value="te">Telugu (తెలుగు)</option>
+            <option value="kn">Kannada (ಕನ್ನಡ)</option>
+            <option value="bn">Bengali (বাংলা)</option>
+            <option value="mr">Marathi (मराठी)</option>
+            <option value="gu">Gujarati (ગુજરાતી)</option>
+            <option value="fr">French (Français)</option>
+            <option value="de">German (Deutsch)</option>
+            <option value="es">Spanish (Español)</option>
+            <option value="ja">Japanese (日本語)</option>
+            <option value="ko">Korean (한국어)</option>
+            <option value="zh-CN">Chinese (中文)</option>
           </select>
-          <button class="swap-ic" id="swapLang" aria-label="Swap Languages">⇄</button>
+          <button class="swap-ic" id="swapLang" aria-label="Swap Languages" title="Swap Languages">⇄</button>
           <select id="toLang" aria-label="Target Language">
+            <option value="ta">Tamil (தமிழ்)</option>
             <option value="en">English</option>
-            <option value="ta">Tamil</option>
-            <option value="hi">Hindi</option>
-            <option value="fr">French</option>
-            <option value="es">Spanish</option>
+            <option value="si">Sinhala (සිංහල)</option>
+            <option value="hi">Hindi (हिंदी)</option>
+            <option value="ml">Malayalam (മലയാളം)</option>
+            <option value="te">Telugu (తెలుగు)</option>
+            <option value="kn">Kannada (ಕನ್ನಡ)</option>
+            <option value="bn">Bengali (বাংলা)</option>
+            <option value="mr">Marathi (मराठी)</option>
+            <option value="gu">Gujarati (ગુજરાતી)</option>
+            <option value="fr">French (Français)</option>
+            <option value="de">German (Deutsch)</option>
+            <option value="es">Spanish (Español)</option>
+            <option value="ja">Japanese (日本語)</option>
+            <option value="ko">Korean (한국어)</option>
+            <option value="zh-CN">Chinese (中文)</option>
           </select>
         </div>
         <textarea id="srcText" placeholder="Type text here to translate..."></textarea>
         <textarea id="outText" placeholder="Translation will appear here..." readonly style="margin-top:12px; color:var(--gold-primary); font-weight: 500;"></textarea>
-        <button class="btn-gold" id="translateBtn">Translate ✨</button>
+        <div class="panel-btn-row">
+          <button class="btn-gold" id="translateBtn">Translate ✨</button>
+          <button class="btn-action-outline" id="copyTransBtn" title="Copy Translation"><i class="fa-regular fa-copy"></i> Copy</button>
+          <button class="btn-action-outline" id="clearTransBtn" title="Clear Text"><i class="fa-regular fa-trash-can"></i> Clear</button>
+        </div>
       </div>
 
-      <div class="glass-card panel">
-        <div class="panel-head">
-          <div class="ic-badge"><i class="fa-solid fa-bolt"></i></div>
-          <h3>Quick Console</h3>
+      <div class="glass-card panel console-panel">
+        <div class="panel-head console-panel-head">
+          <div style="display: flex; align-items: center; gap: 16px;">
+            <div class="ic-badge"><i class="fa-solid fa-bolt"></i></div>
+            <h3>Quick Console</h3>
+          </div>
+          <span class="console-lang-tag"><i class="fa-brands fa-js"></i> JavaScript (ES6)</span>
         </div>
-        <div class="quick-actions">
-          <button class="qa-btn" data-say="hello"><span class="ic">👋</span>Say Hello</button>
-          <button class="qa-btn" data-say="about"><span class="ic">👤</span>About Me</button>
-          <button class="qa-btn" data-say="skills"><span class="ic">💻</span>My Skills</button>
-          <button class="qa-btn" data-say="projects"><span class="ic">💼</span>My Projects</button>
+        <div class="console-presets">
+          <span class="presets-label">Presets:</span>
+          <button class="preset-chip quick-console-preset" data-code='console.log("Hello Hari! Welcome to my AI Portfolio.");'>👋 Hello Hari</button>
+          <button class="preset-chip quick-console-preset" data-code='console.log("Haribalan S — Mechanical Engineering Student | Python Developer &amp; AI/ML Enthusiast\nQuote: Learn • Build • Create • Grow");'>👤 About Me</button>
+          <button class="preset-chip quick-console-preset" data-code='const projects = [\n  "Voice Control Robotic Car",\n  "Voice Control Mini Forklift",\n  "Diabetes Prediction with ML",\n  "Image Classification with CNN"\n];\nconsole.log("Featured Projects:", projects);'>🤖 Projects</button>
+          <button class="preset-chip quick-console-preset" data-code='const skills = {\n  programming: ["Python", "ML", "Pandas", "NumPy", "HTML/CSS/JS", "SQL"],\n  engineering: ["AutoCAD 2D/3D", "SolidWorks", "Basic Electronics"],\n  tools: ["Arduino IDE", "MATLAB", "Jupyter", "TensorFlow/Keras"]\n};\nconsole.log("Technical Skillset:", skills);'>💻 Skills</button>
+        </div>
+        <div class="console-editor-wrap">
+          <textarea id="quickCodeInput" placeholder="// Enter JavaScript code here...&#10;console.log(&quot;Hello Hari&quot;);" spellcheck="false"></textarea>
+        </div>
+        <div class="console-output-wrap">
+          <div class="console-output-head">
+            <span><i class="fa-solid fa-terminal"></i> Console Output</span>
+            <span class="shortcut-hint">Ctrl + Enter to run</span>
+          </div>
+          <div id="quickConsoleOutput" class="console-output-screen"></div>
+        </div>
+        <div class="console-actions">
+          <button class="btn-gold" id="quickRunBtn"><i class="fa-solid fa-play"></i> Run Code</button>
+          <button class="btn-action-outline" id="quickClearBtn"><i class="fa-regular fa-trash-can"></i> Clear</button>
         </div>
       </div>
     </div>
@@ -270,7 +314,7 @@
             <div class="glass-card timeline-content">
               <h4>🎓 Higher Secondary (HSC)</h4>
               <h5>Bishop Heber Higher Secondary School</h5>
-              <p style="font-weight: bold; margin-top: 6px;">Percentage: 80.6%</p>
+              <p style="font-weight: bold; margin-top: 6px;">Percentage: 83.33%</p>
             </div>
           </div>
           <div class="timeline-item">
@@ -279,7 +323,7 @@
             <div class="glass-card timeline-content">
               <h4>🎓 Secondary School (SSLC)</h4>
               <h5>Sri Ramakrishna Vidyalaya Matriculation School</h5>
-              <p style="font-weight: bold; margin-top: 6px;">Percentage: 80.2%</p>
+              <p style="font-weight: bold; margin-top: 6px;">Percentage: 80.6%</p>
             </div>
           </div>
         </div>
@@ -378,7 +422,7 @@
     <!-- PROJECTS SECTION -->
     <section id="projects">
       <span class="section-tag">// 03 Work</span>
-      <h2 class="section-title">Projects <span>(Robotics &amp; Automation)</span></h2>
+      <h2 class="section-title">Featured <span>Projects</span></h2>
       <div class="proj-grid">
         
         <!-- Project One: Voice Control Robotic Car -->
@@ -386,8 +430,8 @@
           <div class="proj-thumb"><i class="fa-solid fa-car-side"></i></div>
           <div class="proj-body">
             <h4>Voice Control Robotic Car</h4>
-            <div style="color:var(--gold-primary); font-size:12px; font-weight:bold; margin-bottom:8px;">1st Project (SEM 3)</div>
-            <p>Designed and implemented a Voice-Controlled Robotic Car using Arduino Uno, HC-05 Bluetooth, and an Android app, enabling real-time navigation (forward, backward, turn, stop) via speech recognition.</p>
+            <div style="color:var(--gold-primary); font-size:12px; font-weight:bold; margin-bottom:8px;">Mechanical &amp; Robotics (SEM 3)</div>
+            <p>Designed and implemented a voice-controlled robotic car using Arduino Uno, HC-05 Bluetooth, and an Android app, enabling real-time voice-directed vehicle navigation.</p>
             <div class="tag-row">
               <span class="tag">Arduino Uno</span>
               <span class="tag">HC-05 Bluetooth</span>
@@ -402,8 +446,8 @@
           <div class="proj-thumb"><i class="fa-solid fa-truck-ramp-box"></i></div>
           <div class="proj-body">
             <h4>Voice Control Mini Forklift</h4>
-            <div style="color:var(--gold-primary); font-size:12px; font-weight:bold; margin-bottom:8px;">2nd Project (SEM 4)</div>
-            <p>Developed a voice-operated forklift using Arduino, implemented voice command control system, reduced manual effort and improved automation.</p>
+            <div style="color:var(--gold-primary); font-size:12px; font-weight:bold; margin-bottom:8px;">Mechanical &amp; Automation (SEM 4)</div>
+            <p>Developed a voice-operated mini forklift using Arduino, implementing an automated voice command system to minimize manual material handling effort.</p>
             <div class="tag-row">
               <span class="tag">Arduino</span>
               <span class="tag">Voice Command</span>
@@ -413,18 +457,36 @@
           </div>
         </div>
 
-        <!-- Project Three: CAD & Electronics -->
+        <!-- Project Three: Diabetes Prediction using Machine Learning -->
         <div class="glass-card proj-card reveal-item reveal-fade-up">
-          <div class="proj-thumb"><i class="fa-solid fa-compass-drafting"></i></div>
+          <div class="proj-thumb"><i class="fa-solid fa-heart-pulse"></i></div>
           <div class="proj-body">
-            <h4>Mechanical CAD &amp; Automation</h4>
-            <div style="color:var(--gold-primary); font-size:12px; font-weight:bold; margin-bottom:8px;">Design &amp; Simulation</div>
-            <p>Mechanical design, component modeling, and circuit integration using AutoCAD, SolidWorks, C Programming, Python, and Basic Electronics.</p>
+            <h4>Diabetes Prediction with ML</h4>
+            <div style="color:var(--gold-primary); font-size:12px; font-weight:bold; margin-bottom:8px;">Python &amp; Machine Learning</div>
+            <p>Built a classification model to predict diabetes likelihood with high precision using Logistic Regression and Random Forest algorithms on clinical datasets.</p>
             <div class="tag-row">
-              <span class="tag">AutoCAD</span>
-              <span class="tag">SolidWorks</span>
-              <span class="tag">C / Python</span>
-              <span class="tag">Basic Electronics</span>
+              <span class="tag">Python</span>
+              <span class="tag">Scikit-Learn</span>
+              <span class="tag">Logistic Regression</span>
+              <span class="tag">Random Forest</span>
+              <span class="tag">Pandas</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Four: Image Classification with CNN -->
+        <div class="glass-card proj-card reveal-item reveal-fade-up">
+          <div class="proj-thumb"><i class="fa-solid fa-network-wired"></i></div>
+          <div class="proj-body">
+            <h4>Image Classification with CNN</h4>
+            <div style="color:var(--gold-primary); font-size:12px; font-weight:bold; margin-bottom:8px;">Deep Learning &amp; AI</div>
+            <p>Developed a Convolutional Neural Network (CNN) to classify complex multi-class image benchmarks (such as CIFAR-10) using TensorFlow and Keras.</p>
+            <div class="tag-row">
+              <span class="tag">Python</span>
+              <span class="tag">TensorFlow / Keras</span>
+              <span class="tag">CNN</span>
+              <span class="tag">Deep Learning</span>
+              <span class="tag">CIFAR-10</span>
             </div>
           </div>
         </div>
@@ -434,129 +496,214 @@
 
     <!-- RESUME SECTION -->
     <section id="resume">
-      <span class="section-tag">// 04 Background</span>
+      <span class="section-tag">// 04 Credentials &amp; Background</span>
       <h2 class="section-title">My <span>Resume</span></h2>
       <div class="glass-card resume-box reveal-item reveal-fade-up" style="flex-direction: column; align-items: flex-start; gap: 24px;">
         
         <!-- Resume Header Bar -->
         <div style="display: flex; justify-content: space-between; width: 100%; flex-wrap: wrap; gap: 20px; border-bottom: 1px solid rgba(212,175,55,0.2); padding-bottom: 20px;">
           <div>
-            <h2 style="color:var(--gold-primary); font-family:var(--font-display); margin:0;">HARIBALAN S</h2>
-            <p style="color:var(--text-secondary); font-size:16px; margin:4px 0 0;">Mechanical Engineering Student | Learn • Build • Grow</p>
-            <p style="color:var(--text-muted); font-size:13px; margin:2px 0 0;"><i class="fa-solid fa-location-dot"></i> Mathur, Pudukkottai, Tamil Nadu - 622515 | 📞 +91 8870210399</p>
+            <h2 style="color:var(--gold-primary); font-family:var(--font-display); font-size:28px; margin:0; letter-spacing:1px;">HARIBALAN S</h2>
+            <p style="color:var(--text-secondary); font-size:16px; margin:5px 0 0; font-weight:600;">
+              Mechanical Engineering Student | Python Developer | AI/ML Enthusiast | Problem Solver
+            </p>
+            <p style="color:var(--gold-primary); font-size:13.5px; font-style:italic; margin:4px 0 0;">
+              “Learn • Build • Create • Grow” &nbsp;—&nbsp; “Small Steps Big Dreams”
+            </p>
+            <p style="color:var(--text-muted); font-size:13px; margin:6px 0 0;">
+              <i class="fa-solid fa-location-dot"></i> 197/B, Tharmanagar, Mathur, Pudukkottai (Kulathur Taluk), Tamil Nadu - 622515 &nbsp;|&nbsp; 
+              <i class="fa-solid fa-phone"></i> +91 8870210399 &nbsp;|&nbsp; 
+              <i class="fa-solid fa-envelope"></i> haribalans24me@srishakthi.ac.in
+            </p>
           </div>
-          <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-            <a class="btn-gold" href="/assets/resume/haribalan_resume.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-eye"></i> View PDF Resume</a>
+          <div style="display: flex; gap: 12px; flex-wrap: wrap; align-items: center;">
+            <a class="btn-gold" href="/assets/resume/haribalan_resume.pdf" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pdf"></i> View PDF Resume</a>
             <a class="btn-primary" href="/assets/resume/haribalan_resume.pdf" id="resumeBtn" download="Haribalan_S_Resume.pdf" target="_blank"><i class="fa-solid fa-download"></i> Download PDF Resume</a>
           </div>
         </div>
 
-        <!-- Career Objective -->
-        <div style="width: 100%; background: rgba(255,255,255,0.02); border-left: 3px solid var(--gold-primary); padding: 12px 16px; border-radius: 4px;">
-          <b style="color:var(--gold-primary); font-size:14px; text-transform:uppercase; letter-spacing:1px;"><i class="fa-solid fa-bullseye"></i> Career Objective</b>
-          <p style="color:var(--text-secondary); font-size:13.5px; margin:6px 0 0; line-height:1.6;">
-            To obtain a challenging position in a reputed organization where I can apply my technical knowledge, problem-solving skills and continuous learning attitude to contribute to the growth of the organization while building my career in the field of Mechanical Engineering.
+        <!-- About Me / Profile Summary -->
+        <div style="width: 100%; background: rgba(255,255,255,0.02); border-left: 3px solid var(--gold-primary); padding: 14px 18px; border-radius: 6px;">
+          <b style="color:var(--gold-primary); font-size:14px; text-transform:uppercase; letter-spacing:1px;"><i class="fa-solid fa-user-tie"></i> About Me</b>
+          <p style="color:var(--text-secondary); font-size:14px; margin:8px 0 0; line-height:1.7;">
+            Motivated and versatile Mechanical Engineering student with a strong interest in Python, Artificial Intelligence and Automation. Eager to apply my technical skills, problem-solving ability and continuous learning mindset to contribute to innovative projects and build a successful career in engineering and IT.
           </p>
         </div>
 
         <!-- Resume Grid Layout -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; width: 100%;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px; width: 100%;">
           
-          <!-- Education & Training Column -->
+          <!-- Column 1: Education & Industrial Exposure -->
           <div>
             <h4 style="color:var(--gold-primary); font-size:18px; margin-bottom:15px;"><i class="fa-solid fa-graduation-cap"></i> Education</h4>
-            <div style="display:flex; flex-direction:column; gap:15px; border-left: 2px solid var(--gold-primary); padding-left: 15px; margin-bottom:25px;">
-              <div>
-                <b style="color:#FFF;">B.E Mechanical Engineering (2024 - 2028)</b>
-                <div style="color:var(--text-secondary); font-size:13px;">Sri Shakthi Institute of Engineering and Technology</div>
+            <div style="display:flex; flex-direction:column; gap:14px; border-left: 2px solid var(--gold-primary); padding-left: 15px; margin-bottom:28px;">
+              <div style="background:rgba(255,255,255,0.02); padding:10px 14px; border-radius:6px; border:1px solid rgba(255,255,255,0.05);">
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                  <b style="color:#FFF;">B.E. Mechanical Engineering</b>
+                  <span style="color:var(--gold-primary); font-size:12px; font-weight:bold;">2024 — 2028</span>
+                </div>
+                <div style="color:var(--text-secondary); font-size:13px; margin:2px 0;">Sri Shakthi Institute of Engineering and Technology</div>
                 <div style="color:var(--gold-primary); font-size:13px; font-weight:bold;">CGPA: 8.5</div>
               </div>
-              <div>
-                <b style="color:#FFF;">HSC (2023 - 2024)</b>
-                <div style="color:var(--text-secondary); font-size:13px;">Bishop Heber Higher Secondary School</div>
+              <div style="background:rgba(255,255,255,0.02); padding:10px 14px; border-radius:6px; border:1px solid rgba(255,255,255,0.05);">
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                  <b style="color:#FFF;">Higher Secondary (HSC)</b>
+                  <span style="color:var(--gold-primary); font-size:12px; font-weight:bold;">2023 — 2024</span>
+                </div>
+                <div style="color:var(--text-secondary); font-size:13px; margin:2px 0;">Bishop Heber Higher Secondary School</div>
                 <div style="color:var(--gold-primary); font-size:13px; font-weight:bold;">Percentage: 83.33%</div>
               </div>
-              <div>
-                <b style="color:#FFF;">SSLC (2021 - 2022)</b>
-                <div style="color:var(--text-secondary); font-size:13px;">Sri Ramakrishna Vidyalaya Matriculation School</div>
+              <div style="background:rgba(255,255,255,0.02); padding:10px 14px; border-radius:6px; border:1px solid rgba(255,255,255,0.05);">
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                  <b style="color:#FFF;">Secondary School (SSLC)</b>
+                  <span style="color:var(--gold-primary); font-size:12px; font-weight:bold;">2021 — 2022</span>
+                </div>
+                <div style="color:var(--text-secondary); font-size:13px; margin:2px 0;">Sri Ramakrishna Vidyalaya Matriculation School</div>
                 <div style="color:var(--gold-primary); font-size:13px; font-weight:bold;">Percentage: 80.6%</div>
               </div>
             </div>
 
-            <h4 style="color:var(--gold-primary); font-size:18px; margin-bottom:15px;"><i class="fa-solid fa-laptop-code"></i> Internship &amp; Training</h4>
-            <div style="border-left: 2px solid var(--gold-primary); padding-left: 15px;">
-              <b style="color:#FFF;">AI/ML Internship (Virtual/Online)</b>
-              <div style="color:var(--text-secondary); font-size:13px; margin-top:4px;">
-                • Learned Machine Learning algorithms, data preprocessing, and model building using Python.<br>
-                • Hands-on experience with real-world datasets in Jupyter Notebook and scikit-learn.<br>
-                • Tech Stack: Python, Pandas, NumPy, Matplotlib, Scikit-learn.
+            <h4 style="color:var(--gold-primary); font-size:18px; margin-bottom:15px;"><i class="fa-solid fa-industry"></i> Internship / Industrial Exposure</h4>
+            <div style="display:flex; flex-direction:column; gap:12px; border-left: 2px solid var(--gold-primary); padding-left: 15px;">
+              <div style="background:rgba(255,255,255,0.02); padding:10px 14px; border-radius:6px; border:1px solid rgba(255,255,255,0.05);">
+                <b style="color:#FFF; font-size:13.5px;">TVS Vehicle Mobility Solution, Coimbatore</b>
+                <div style="color:var(--text-secondary); font-size:12.5px; margin-top:3px; line-height:1.5;">
+                  Exposure to automotive sector and vehicle mobility systems.
+                </div>
+              </div>
+              <div style="background:rgba(255,255,255,0.02); padding:10px 14px; border-radius:6px; border:1px solid rgba(255,255,255,0.05);">
+                <b style="color:#FFF; font-size:13.5px;">Tenneco Clean Air India Limited, Oragadam</b>
+                <div style="color:var(--text-secondary); font-size:12.5px; margin-top:3px; line-height:1.5;">
+                  Gained practical knowledge in vehicle assembly, maintenance and customer service operations.
+                </div>
+              </div>
+              <div style="background:rgba(255,255,255,0.02); padding:10px 14px; border-radius:6px; border:1px solid rgba(255,255,255,0.05);">
+                <b style="color:#FFF; font-size:13.5px;">Reliable Motors CV (Mahindra), Coimbatore</b>
+                <div style="color:var(--text-secondary); font-size:12.5px; margin-top:3px; line-height:1.5;">
+                  Exposure to real-world working environment and team collaboration.
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- Projects Column -->
+          <!-- Column 2: Projects from Resume -->
           <div>
-            <h4 style="color:var(--gold-primary); font-size:18px; margin-bottom:15px;"><i class="fa-solid fa-diagram-project"></i> Featured Projects</h4>
+            <h4 style="color:var(--gold-primary); font-size:18px; margin-bottom:15px;"><i class="fa-solid fa-diagram-project"></i> Projects</h4>
             <div style="display:flex; flex-direction:column; gap:12px;">
-              <div style="background:rgba(255,255,255,0.03); padding:10px 14px; border-radius:6px; border:1px solid rgba(255,255,255,0.05);">
-                <b style="color:#FFF; font-size:13.5px;">1. House Price Prediction</b>
-                <div style="color:var(--text-secondary); font-size:12px; margin-top:2px;">Built regression model using Python, Pandas, Scikit-learn.</div>
+              
+              <div style="background:rgba(255,255,255,0.03); padding:12px 14px; border-radius:8px; border:1px solid rgba(212,175,55,0.15);">
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                  <b style="color:#FFF; font-size:14px;">1. Voice Control Robotic Car</b>
+                  <span class="tag" style="font-size:11px; padding:2px 8px;">Mechanical</span>
+                </div>
+                <div style="color:var(--text-secondary); font-size:12.5px; margin-top:6px; line-height:1.5;">
+                  Designed and implemented a voice-controlled robotic car using Arduino Uno, HC-05 Bluetooth and Android app.
+                </div>
               </div>
-              <div style="background:rgba(255,255,255,0.03); padding:10px 14px; border-radius:6px; border:1px solid rgba(255,255,255,0.05);">
-                <b style="color:#FFF; font-size:13.5px;">2. Movie Recommendation System</b>
-                <div style="color:var(--text-secondary); font-size:12px; margin-top:2px;">Content-based filtering using Cosine Similarity &amp; Streamlit.</div>
+
+              <div style="background:rgba(255,255,255,0.03); padding:12px 14px; border-radius:8px; border:1px solid rgba(212,175,55,0.15);">
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                  <b style="color:#FFF; font-size:14px;">2. Voice Control Mini Forklift</b>
+                  <span class="tag" style="font-size:11px; padding:2px 8px;">Mechanical</span>
+                </div>
+                <div style="color:var(--text-secondary); font-size:12.5px; margin-top:6px; line-height:1.5;">
+                  Developed a voice-operated forklift using Arduino and implemented voice command control system.
+                </div>
               </div>
-              <div style="background:rgba(255,255,255,0.03); padding:10px 14px; border-radius:6px; border:1px solid rgba(255,255,255,0.05);">
-                <b style="color:#FFF; font-size:13.5px;">3. Student Performance Prediction</b>
-                <div style="color:var(--text-secondary); font-size:12px; margin-top:2px;">Predicted student scores using regression &amp; Seaborn charts.</div>
+
+              <div style="background:rgba(255,255,255,0.03); padding:12px 14px; border-radius:8px; border:1px solid rgba(212,175,55,0.15);">
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                  <b style="color:#FFF; font-size:14px;">3. Diabetes Prediction using ML</b>
+                  <span class="tag" style="font-size:11px; padding:2px 8px;">Python</span>
+                </div>
+                <div style="color:var(--text-secondary); font-size:12.5px; margin-top:6px; line-height:1.5;">
+                  Built a classification model to predict diabetes using Logistic Regression and Random Forest.
+                </div>
               </div>
-              <div style="background:rgba(255,255,255,0.03); padding:10px 14px; border-radius:6px; border:1px solid rgba(255,255,255,0.05);">
-                <b style="color:#FFF; font-size:13.5px;">4. Image Classification using CNN</b>
-                <div style="color:var(--text-secondary); font-size:12px; margin-top:2px;">CNN model for CIFAR-10 image classification (TensorFlow/Keras).</div>
+
+              <div style="background:rgba(255,255,255,0.03); padding:12px 14px; border-radius:8px; border:1px solid rgba(212,175,55,0.15);">
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                  <b style="color:#FFF; font-size:14px;">4. Image Classification with CNN</b>
+                  <span class="tag" style="font-size:11px; padding:2px 8px;">Python</span>
+                </div>
+                <div style="color:var(--text-secondary); font-size:12.5px; margin-top:6px; line-height:1.5;">
+                  Developed a CNN model to classify images (e.g., CIFAR-10) using TensorFlow &amp; Keras.
+                </div>
               </div>
-              <div style="background:rgba(255,255,255,0.03); padding:10px 14px; border-radius:6px; border:1px solid rgba(255,255,255,0.05);">
-                <b style="color:#FFF; font-size:13.5px;">5. Web Application (To-Do List)</b>
-                <div style="color:var(--text-secondary); font-size:12px; margin-top:2px;">Interactive web app with add/delete tasks (HTML, CSS, JS).</div>
-              </div>
+
+            </div>
+
+            <h4 style="color:var(--gold-primary); font-size:18px; margin-top:24px; margin-bottom:12px;"><i class="fa-solid fa-heart"></i> Interests</h4>
+            <div style="display:flex; flex-wrap:wrap; gap:6px;">
+              <span class="tag">Robotics &amp; Automation</span>
+              <span class="tag">Coding &amp; Programming</span>
+              <span class="tag">Mechanical Design</span>
+              <span class="tag">Photography</span>
+              <span class="tag">Nature &amp; Outdoor Exposure</span>
+              <span class="tag">Learning New Technologies</span>
             </div>
           </div>
 
-          <!-- Technical & Personal Details Column -->
+          <!-- Column 3: Skills, Strengths, Personal Details -->
           <div>
-            <h4 style="color:var(--gold-primary); font-size:18px; margin-bottom:15px;"><i class="fa-solid fa-gears"></i> Technical &amp; Soft Skills</h4>
-            <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:20px;">
-              <span class="tag">AutoCAD (2D &amp; 3D)</span>
-              <span class="tag">SolidWorks</span>
-              <span class="tag">C Programming</span>
-              <span class="tag">Python</span>
-              <span class="tag">Arduino</span>
-              <span class="tag">Machine Learning</span>
-              <span class="tag">Scikit-learn</span>
-              <span class="tag">MS Office</span>
-              <span class="tag">Teamwork</span>
-              <span class="tag">Problem Solving</span>
-              <span class="tag">Adaptability</span>
+            <h4 style="color:var(--gold-primary); font-size:18px; margin-bottom:12px;"><i class="fa-solid fa-gears"></i> Skills Breakdown</h4>
+            
+            <div style="margin-bottom:14px;">
+              <b style="color:#FFF; font-size:12.5px; text-transform:uppercase; letter-spacing:0.5px; display:block; margin-bottom:6px;">Programming &amp; Data</b>
+              <div style="display:flex; flex-wrap:wrap; gap:6px;">
+                <span class="tag">Python</span>
+                <span class="tag">Machine Learning</span>
+                <span class="tag">Pandas</span>
+                <span class="tag">NumPy</span>
+                <span class="tag">HTML / CSS / JS</span>
+                <span class="tag">SQL (MySQL)</span>
+              </div>
             </div>
 
-            <h4 style="color:var(--gold-primary); font-size:18px; margin-bottom:12px;"><i class="fa-solid fa-id-card"></i> Personal Details</h4>
-            <div style="color:var(--text-secondary); font-size:13px; line-height:1.8;">
+            <div style="margin-bottom:14px;">
+              <b style="color:#FFF; font-size:12.5px; text-transform:uppercase; letter-spacing:0.5px; display:block; margin-bottom:6px;">Mechanical &amp; Design</b>
+              <div style="display:flex; flex-wrap:wrap; gap:6px;">
+                <span class="tag">AutoCAD (2D &amp; 3D)</span>
+                <span class="tag">SolidWorks</span>
+                <span class="tag">Basic Electronics</span>
+                <span class="tag">Manufacturing &amp; Assembly</span>
+              </div>
+            </div>
+
+            <div style="margin-bottom:18px;">
+              <b style="color:#FFF; font-size:12.5px; text-transform:uppercase; letter-spacing:0.5px; display:block; margin-bottom:6px;">Tools &amp; Platforms</b>
+              <div style="display:flex; flex-wrap:wrap; gap:6px;">
+                <span class="tag">Arduino IDE</span>
+                <span class="tag">MATLAB (Basics)</span>
+                <span class="tag">Jupyter Notebook</span>
+                <span class="tag">TensorFlow / Keras</span>
+                <span class="tag">Git &amp; GitHub</span>
+                <span class="tag">VS Code</span>
+              </div>
+            </div>
+
+            <h4 style="color:var(--gold-primary); font-size:18px; margin-bottom:10px;"><i class="fa-solid fa-star"></i> Key Strengths</h4>
+            <div style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:18px;">
+              <span class="tag">Quick Learner</span>
+              <span class="tag">Problem Solver</span>
+              <span class="tag">Adaptable to New Technologies</span>
+              <span class="tag">Good Team Player</span>
+              <span class="tag">Strong Communication</span>
+              <span class="tag">Positive Attitude</span>
+              <span class="tag">Goal Oriented</span>
+            </div>
+
+            <h4 style="color:var(--gold-primary); font-size:18px; margin-bottom:10px;"><i class="fa-solid fa-id-card"></i> Personal Details</h4>
+            <div style="color:var(--text-secondary); font-size:13px; line-height:1.8; background:rgba(255,255,255,0.02); padding:10px 14px; border-radius:6px; border:1px solid rgba(255,255,255,0.05);">
               <div><b>DOB:</b> 03/12/2006</div>
               <div><b>Gender / Status:</b> Male / Single</div>
-              <div><b>Nationality:</b> Indian</div>
+              <div><b>Nationality:</b> Indian (Tamil Nadu)</div>
               <div><b>Languages:</b> English (Fluent), Tamil (Native), Hindi (Basic)</div>
-              <div><b>Email:</b> haribalans24me@srisakthi.ac.in</div>
-              <div><b>Location:</b> Mathur, Pudukkottai, Tamil Nadu - 622515</div>
+              <div><b>Email:</b> haribalans24me@srishakthi.ac.in</div>
+              <div><b>Phone:</b> +91 8870210399</div>
             </div>
           </div>
 
-        </div>
-
-        <!-- PDF Preview Embed Container -->
-        <div style="width:100%; margin-top:10px;">
-          <h4 style="color:var(--gold-primary); font-size:16px; margin-bottom:10px;"><i class="fa-solid fa-file-pdf"></i> Resume Preview</h4>
-          <div style="width:100%; height:450px; border-radius:10px; overflow:hidden; border:1px solid rgba(212,175,55,0.3); background:#1e1e24;">
-            <iframe src="/assets/resume/haribalan_resume.pdf" style="width:100%; height:100%; border:none;" title="Haribalan S Resume PDF"></iframe>
-          </div>
         </div>
 
       </div>
@@ -653,7 +800,9 @@
   <script src="/js/cursor.js"></script>
   <script src="/js/assistant.js"></script>
   <script src="/js/voice.js"></script>
+  <script src="/js/translationService.js"></script>
   <script src="/js/translator.js"></script>
+  <script src="/js/console.js"></script>
   <script src="/js/animation.js"></script>
   <script src="/js/main.js"></script>
 </body>
